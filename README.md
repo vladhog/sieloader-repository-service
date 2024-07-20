@@ -19,10 +19,10 @@ All endpoints stored in api.py file, here i will tell about some of them:
 - /repo/public_key (base64 bytes)
 	- For safety reasons, we using PGP keys system for verifying that you talking to right server, with this endpoint you can get server's public key.
 	
-- /repo/<repo>	(base64 bytes)
+- /repo/"repo name"	(base64 bytes)
 	- Download url for addons, for example /repo/invoker-starter-pack will download invoker-starter-pack
 	
-- /repo/<repo>/signature (base64 bytes)
+- /repo/"repo name"/signature (base64 bytes)
 	- With this endpoint you can get addon's signature, signed by server. Its made for making sure that you getting right information and that no one modified it while transfer.
 
 # Official servers
