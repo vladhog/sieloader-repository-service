@@ -34,5 +34,12 @@ All endpoints stored in api.py file, here i will tell about some of them:
 # Official servers
 https://sierra.vladhog.ru/ - Vladhog Security SIERRA Repository
 
+# Docker
+You can build your own image by instructions in docker folder, or get our image from here:
+
+``registry.vladhog.ru/public/sieloader-repository-server``
+
+it have support for both amd64 and arm64 systems.
+
 # License
 Sieloader Repository Service © 2024 by Vladhog Security is licensed under Attribution-NonCommercial-ShareAlike 4.0 International.
