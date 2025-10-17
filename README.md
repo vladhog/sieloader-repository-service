@@ -8,6 +8,12 @@ All settings of Sieloader Repository Service stored in sierra.ini file, there yo
 - repository hostname, should be external hostname/ip via which people will be able to communicate with service
 - secure option, made for servers who using HTTPS connection, switch it to True if using HTTPS and leave it False if HTTP
 
+or use environment variable
+- ``SIERRA_REPOSITORY_NAME`` - setting repository name, works same as `repository_name` in sierra.ini
+- ``SIERRA_HOSTNAME`` - setting repository hostname, works same as `hostname` in sierra.ini
+- ``SIERRA_EMAIL`` - setting repository email, works same as `email` in sierra.ini
+- ``SIERRA_SECURE`` - settings repository secure mode (will replace http with https), works same as `secure` in sierra.ini
+
 # Endpoints
 All endpoints stored in api.py file, here i will tell about some of them:
 - /repo/info (json)

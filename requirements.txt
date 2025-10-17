@@ -1,5 +1,0 @@
-CherryPy==18.10.0
-cherrypy_dynpool==2.4.0
-Flask==2.2.5
-Flask_Minify[go]==0.47
-PGPy==0.6.0

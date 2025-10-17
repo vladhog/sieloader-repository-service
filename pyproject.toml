@@ -1,0 +1,19 @@
+[project]
+name = "sierra-repository-server"
+version = "0.1.5"
+description = "SIERRA repository server competable with sieloader"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.119.0",
+    "hypercorn[h3,uvloop]>=0.17.3",
+    "pgpy>=0.6.0",
+    "standard-imghdr>=3.13.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.4.2", "pytest-asyncio>=1.0.0", "pytest-timeout>=2.4.0"
+]
+no-cache = true
+concurrent-builds = 4
+concurrent-installs = 4
