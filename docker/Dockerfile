@@ -5,7 +5,12 @@ COPY annotations.py params.py pyproject.toml server.py key.pgp sierra.ini uv.loc
 ADD data /repository/data
 WORKDIR /repository/
 
-RUN apk add build-base openssl-dev python3-dev bsd-compat-headers libffi-dev
+RUN apk add --no-cache build-base
+RUN apk add --no-cache openssl-dev
+RUN apk add --no-cache python3-dev
+RUN apk add --no-cache bsd-compat-headers
+RUN apk add --no-cache libffi-dev
+
 RUN uv sync --locked --no-install-project --no-editable --compile-bytecode --no-cache --no-dev
 ENV PATH="/repository/.venv/bin:$PATH"
 
