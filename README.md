@@ -1,45 +1,5 @@
 # Sieloader Repository Service
-Sieloader (SIERRA tool addons loader) Repository Service made for simple share of addons used with sieloader tool and sierepo command line tool.
+This repository was moved to ``https://git.vladhog.ru/Vladhog-Security-Open-Source/Sieloader-Repository-Service`` and current version on Github left as archive.
 
-# Settings up server
-All settings of Sieloader Repository Service stored in sierra.ini file, there you can find:
-- repository name
-- repository contact email 
-- repository hostname, should be external hostname/ip via which people will be able to communicate with service
-- secure option, made for servers who using HTTPS connection, switch it to True if using HTTPS and leave it False if HTTP
-
-or use environment variable
-- ``SIERRA_REPOSITORY_NAME`` - setting repository name, works same as `repository_name` in sierra.ini
-- ``SIERRA_HOSTNAME`` - setting repository hostname, works same as `hostname` in sierra.ini
-- ``SIERRA_EMAIL`` - setting repository email, works same as `email` in sierra.ini
-- ``SIERRA_SECURE`` - settings repository secure mode (will replace http with https), works same as `secure` in sierra.ini
-
-# Endpoints
-All endpoints stored in api.py file, here i will tell about some of them:
-- /repo/info (json)
-	- Endpoint made for getting information about repository, such as repository name, version, contact email and amount of addons hosted by service.
-	
-- /repo/metadata (json)
-	- Providing metadata about all addons stored, such as addon name, author, author contact email, description, size of addon, source url for downloading addon and addon version.
-
-- /repo/public_key (base64 bytes)
-	- For safety reasons, we using PGP keys system for verifying that you talking to right server, with this endpoint you can get server's public key.
-	
-- /repo/"repo name"	(base64 bytes)
-	- Download url for addons, for example /repo/invoker-starter-pack will download invoker-starter-pack
-	
-- /repo/"repo name"/signature (base64 bytes)
-	- With this endpoint you can get addon's signature, signed by server. Its made for making sure that you getting right information and that no one modified it while transfer.
-
-# Official servers
-https://sierra.vladhog.ru/ - Vladhog Security SIERRA Repository
-
-# Docker
-You can build your own image by instructions in docker folder, or get our image from here:
-
-``registry.vladhog.ru/public/sieloader-repository-server``
-
-it have support for both amd64 and arm64 systems.
-
-# License
-Sieloader Repository Service © 2024 by Vladhog Security is licensed under Attribution-NonCommercial-ShareAlike 4.0 International.
+## Why?
+Because Vladhog Security moved to self-hosted gitea, our actions runners and image storage also moved to there.
